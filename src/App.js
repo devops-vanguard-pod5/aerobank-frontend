@@ -57,7 +57,6 @@ function App() {
           path="/bank/customer/account/transactions"
           element={<ViewBankAllTransactions />}
         />
-
         <Route
           path="/customer/bank/account/statement"
           element={<ViewCustomerTransactions />}

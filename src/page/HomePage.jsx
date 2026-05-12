@@ -12,72 +12,64 @@ const HomePage = () => {
       <div className="container mt-5">
         <div className="row">
           <div className="col-md-8 text-color">
-            <h1>Welcome to Online Banking System</h1>
-            <p>
-              Welcome to our cutting-edge Online Banking System, where financial
-              empowerment meets technological innovation. Seamlessly navigate
-              through your financial journey with ease, as you initiate secure
-              transactions, conveniently deposit funds into your accounts, and
-              effortlessly withdraw when needed.
+            <h1 className="fw-bold text-primary">Welcome to AeroBank</h1>
+            <p className="lead mt-3">
+              Experience the next generation of secure, cloud-native banking. 
+              Seamlessly navigate through your financial journey with ease, as you initiate secure 
+              transactions, conveniently deposit funds, and effortlessly withdraw when needed.
             </p>
             <p>
-              Our user-friendly interface ensures a smooth and intuitive
-              experience, giving you full control over your finances from the
-              comfort of your own device. With advanced security measures in
-              place, you can trust that your sensitive information is
-              safeguarded throughout every interaction. Join us on this digital
-              financial expedition and unlock a new era of banking convenience
-              and confidence.
+              Powered by a highly available AWS Kubernetes (EKS) microservices architecture, 
+              AeroBank ensures a smooth and intuitive experience, giving you full control over 
+              your finances from any device. With advanced DevSecOps security measures and 
+              encrypted Kubernetes secrets in place, you can trust that your sensitive 
+              information is safeguarded throughout every interaction.
             </p>
-            <Link to="/user/login" className="btn bg-color custom-bg-text">
+            <Link to="/user/login" className="btn bg-color custom-bg-text mt-3 px-4 py-2">
               Get Started
             </Link>
           </div>
           <div className="col-md-4">
             <img
               src={travel_2}
-              alt="Logo"
+              alt="AeroBank Secure Banking"
               width="400"
               height="auto"
-              className="home-image"
+              className="home-image rounded shadow-sm"
             />
           </div>
         </div>
 
-        <div className="row mt-5">
+        <div className="row mt-5 pt-4">
           <div className="col-md-4">
             <img
               src={travel_1}
-              alt="Logo"
+              alt="AeroBank Financial Control"
               width="400"
               height="auto"
-              className="home-image"
+              className="home-image rounded shadow-sm"
             />
           </div>
           <div className="col-md-8 text-color">
-            <h1 className="ms-5">Experience Effortless Financial Management</h1>
-            <p className="ms-5">
-              Discover a new level of financial control through our intuitive
-              Online Banking System. Seamlessly manage transactions, deposits,
-              and withdrawals with a user-friendly interface designed to
-              simplify your banking experience. Whether you're transferring
-              funds, depositing savings, or making withdrawals, our platform
-              ensures security and convenience at every step.
+            <h2 className="ms-5 fw-bold text-primary">Experience Effortless Financial Management</h2>
+            <p className="ms-5 mt-3">
+              Discover a new level of financial control through our intuitive 
+              AeroBank portal. Seamlessly manage transactions, deposits, 
+              and withdrawals with a user-friendly interface designed to 
+              simplify your banking experience. 
             </p>
             <p className="ms-5">
-              Empower yourself with effortless financial management and enjoy
-              the freedom to take charge of your accounts from the comfort of
-              your own device. Join us in revolutionizing the way you interact
-              with your finances, as we pave the way for a more streamlined and
-              secure banking future.
+              Deployed via automated GitOps pipelines for maximum reliability, our platform 
+              ensures your banking data is processed with enterprise-grade speed and security. 
+              Join us in revolutionizing the way you interact with your finances.
             </p>
-            <Link to="/user/login" className="btn bg-color custom-bg-text ms-5">
-              Get Started
+            <Link to="/user/login" className="btn bg-color custom-bg-text ms-5 mt-3 px-4 py-2">
+              Access Your Account
             </Link>
           </div>
         </div>
       </div>
-      <hr />
+      <hr className="mt-5" />
       <Footer />
     </div>
   );
