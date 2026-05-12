@@ -24,7 +24,7 @@ const CustomerAccountFundTransfer = () => {
   };
 
   const saveAccount = (e) => {
-    fetch("https://bankapi.cloudwitches.online/api/bank/transaction/account/transfer", {
+    fetch("http://44.203.246.158:32152/api/bank/transaction/account/transfer", {
       method: "POST",
       headers: {
         Accept: "application/json",

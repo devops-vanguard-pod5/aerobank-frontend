@@ -12,7 +12,7 @@ const ViewBankManagers = () => {
 
   const retrieveAllManagers = async () => {
     const response = await axios.get(
-      "https://bankapi.cloudwitches.online/api/user/fetch/role?role=BANK",
+      "http://44.203.246.158:32152/api/user/fetch/role?role=BANK",
       {
         headers: {
           Authorization: "Bearer " + admin_jwtToken, // Replace with your actual JWT token
