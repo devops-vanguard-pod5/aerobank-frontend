@@ -2,75 +2,117 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <div className="container mt-5">
-      {/* AeroBank Branding Section */}
-      <div className="text-center mb-5">
-        <h1 className="display-4 fw-bold text-primary">Welcome to AeroBank</h1>
-        <p className="lead text-muted mt-3">
-          Experience the next generation of secure, cloud-native banking. 
-          AeroBank is powered by a robust microservices architecture, ensuring 
-          high availability, seamless transactions, and enterprise-grade security.
+    <div className="container mt-5 mb-5">
+      {/* AeroBank Mission */}
+      <div className="text-center mb-5 pb-4 border-bottom">
+        <h1 className="fw-bold text-primary">About AeroBank</h1>
+        <p className="lead text-muted mt-3 mx-auto" style={{ maxWidth: "800px" }}>
+          AeroBank is a next-generation banking platform built as a capstone demonstration of 
+          advanced cloud computing. Powered by a robust microservices architecture on Amazon EKS, 
+          it ensures high availability, rapid CI/CD deployments, and enterprise-grade security.
         </p>
       </div>
 
       {/* Pod 5 Team Section */}
       <div className="text-center mt-5">
-        <h2 className="mb-4 fw-bold">Meet The Team: Pod 5 (DevOps Vanguard)</h2>
-        <p className="text-muted mb-5">
-          The engineering team behind the deployment, security, and infrastructure of the AeroBank Capstone Project.
+        <h2 className="mb-2 fw-bold">Meet The Team</h2>
+        <h4 className="text-primary mb-4">Pod 5: DevOps Vanguard</h4>
+        <p className="text-muted mx-auto mb-5" style={{ maxWidth: "600px" }}>
+          The engineering team behind the architecture, deployment, and security of the AeroBank infrastructure.
         </p>
         
         <div className="row justify-content-center">
-          {/* Tech Lead: Oluwasheyi */}
+          
+          {/* Member 1: Tech Lead */}
           <div className="col-md-4 mb-4">
             <div className="card h-100 shadow-sm border-0">
-              {/* Replace the src with your actual image path later */}
               <img 
-                src="https://via.placeholder.com/300x300?text=Oluwasheyi+Photo" 
-                className="card-img-top rounded-circle w-50 mx-auto mt-4" 
+                src="https://via.placeholder.com/300x300?text=Oluwasheyi" 
+                className="card-img-top rounded-circle mx-auto mt-4" 
+                style={{ width: "150px", height: "150px", objectFit: "cover" }}
                 alt="Oluwasheyi Ojelade" 
               />
               <div className="card-body">
-                <h5 className="card-title fw-bold">Oluwasheyi Ojelade</h5>
-                <h6 className="card-subtitle mb-2 text-primary">Tech Lead / Cloud DevOps Engineer</h6>
-                <p className="card-text text-muted small mt-3">
+                <h5 className="card-title fw-bold mt-2">Oluwasheyi Ojelade</h5>
+                <h6 className="card-subtitle mb-3 text-primary">Tech Lead / Cloud DevOps Engineer</h6>
+                <p className="card-text text-muted small">
                   Architected the AWS EKS infrastructure, implemented GitOps CI/CD pipelines via GitHub Actions & ArgoCD, and secured the RDS database with Kubernetes Secrets.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Team Member 2 Placeholder */}
+          {/* Member 2 */}
           <div className="col-md-4 mb-4">
             <div className="card h-100 shadow-sm border-0">
               <img 
-                src="https://via.placeholder.com/300x300?text=Team+Member+Photo" 
-                className="card-img-top rounded-circle w-50 mx-auto mt-4" 
+                src="https://via.placeholder.com/300x300?text=Team+Member" 
+                className="card-img-top rounded-circle mx-auto mt-4" 
+                style={{ width: "150px", height: "150px", objectFit: "cover" }}
                 alt="Team Member" 
               />
               <div className="card-body">
-                <h5 className="card-title fw-bold">Member Name</h5>
-                <h6 className="card-subtitle mb-2 text-primary">DevOps Engineer</h6>
-                <p className="card-text text-muted small mt-3">
-                  (Add contribution here: e.g., Configured SonarCloud DevSecOps pipelines, managed containerization, and developed monitoring dashboards.)
+                <h5 className="card-title fw-bold mt-2">Team Member 2 Name</h5>
+                <h6 className="card-subtitle mb-3 text-primary">Cloud Engineer</h6>
+                <p className="card-text text-muted small">
+                  (Insert contribution here: e.g., Managed containerization, developed monitoring dashboards, and deployed application manifests.)
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Team Member 3 Placeholder */}
+          {/* Member 3 */}
           <div className="col-md-4 mb-4">
             <div className="card h-100 shadow-sm border-0">
               <img 
-                src="https://via.placeholder.com/300x300?text=Team+Member+Photo" 
-                className="card-img-top rounded-circle w-50 mx-auto mt-4" 
+                src="https://via.placeholder.com/300x300?text=Team+Member" 
+                className="card-img-top rounded-circle mx-auto mt-4" 
+                style={{ width: "150px", height: "150px", objectFit: "cover" }}
                 alt="Team Member" 
               />
               <div className="card-body">
-                <h5 className="card-title fw-bold">Member Name</h5>
-                <h6 className="card-subtitle mb-2 text-primary">Cloud Security Engineer</h6>
-                <p className="card-text text-muted small mt-3">
-                  (Add contribution here: e.g., Engineered AWS IAM roles, optimized Dockerfile security, and eradicated legacy CORS vulnerabilities.)
+                <h5 className="card-title fw-bold mt-2">Team Member 3 Name</h5>
+                <h6 className="card-subtitle mb-3 text-primary">DevSecOps Engineer</h6>
+                <p className="card-text text-muted small">
+                  (Insert contribution here: e.g., Engineered AWS IAM roles, integrated SonarCloud security scanning, and eradicated legacy code vulnerabilities.)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Member 4 */}
+          <div className="col-md-4 mb-4">
+            <div className="card h-100 shadow-sm border-0">
+              <img 
+                src="https://via.placeholder.com/300x300?text=Team+Member" 
+                className="card-img-top rounded-circle mx-auto mt-4" 
+                style={{ width: "150px", height: "150px", objectFit: "cover" }}
+                alt="Team Member" 
+              />
+              <div className="card-body">
+                <h5 className="card-title fw-bold mt-2">Team Member 4 Name</h5>
+                <h6 className="card-subtitle mb-3 text-primary">Site Reliability Engineer</h6>
+                <p className="card-text text-muted small">
+                  (Insert contribution here: e.g., Configured high-availability replicas, managed Route 53 DNS routing, and performed system integration testing.)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Member 5 */}
+          <div className="col-md-4 mb-4">
+            <div className="card h-100 shadow-sm border-0">
+              <img 
+                src="https://via.placeholder.com/300x300?text=Team+Member" 
+                className="card-img-top rounded-circle mx-auto mt-4" 
+                style={{ width: "150px", height: "150px", objectFit: "cover" }}
+                alt="Team Member" 
+              />
+              <div className="card-body">
+                <h5 className="card-title fw-bold mt-2">Team Member 5 Name</h5>
+                <h6 className="card-subtitle mb-3 text-primary">Release Manager</h6>
+                <p className="card-text text-muted small">
+                  (Insert contribution here: e.g., Oversaw sprint planning in Jira, managed Git branching strategies, and documented the software architecture.)
                 </p>
               </div>
             </div>
