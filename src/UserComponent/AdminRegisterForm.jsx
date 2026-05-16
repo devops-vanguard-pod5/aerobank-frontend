@@ -13,7 +13,7 @@
 //   };
 
 //   const loginAction = (e) => {
-//     fetch("http://44.203.246.158:32152/api/user/admin/register", {
+//     fetch("https://bankapi.devopsvanguard.online/api/user/admin/register", {
 //       method: "POST",
 //       headers: {
 //         Accept: "application/json",
@@ -143,7 +143,7 @@ const AdminRegisterForm = () => {
   };
 
   const loginAction = (e) => {
-    fetch("http://44.203.246.158:32152/api/user/admin/register", {
+    fetch("https://bankapi.devopsvanguard.online/api/user/admin/register", {
       method: "POST",
       headers: {
         Accept: "application/json",

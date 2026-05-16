@@ -13,7 +13,7 @@ const AddBankForm = () => {
   const retrieveAllBankUsers = async () => {
     try {
       const response = await axios.get(
-        "http://44.203.246.158:32152/api/user/fetch/bank/managers",
+        "https://bankapi.devopsvanguard.online/api/user/fetch/bank/managers",
         {
           headers: {
             Authorization: "Bearer " + admin_jwtToken, // Replace with your actual JWT token
@@ -56,7 +56,7 @@ const AddBankForm = () => {
   };
 
   const saveBank = (e) => {
-    fetch("http://44.203.246.158:32152/api/bank/register", {
+    fetch("https://bankapi.devopsvanguard.online/api/bank/register", {
       method: "POST",
       headers: {
         Accept: "application/json",

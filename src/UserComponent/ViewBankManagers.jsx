@@ -12,7 +12,7 @@ const ViewBankManagers = () => {
 
   const retrieveAllManagers = async () => {
     const response = await axios.get(
-      "http://44.203.246.158:32152/api/user/fetch/role?role=BANK",
+      "https://bankapi.devopsvanguard.online/api/user/fetch/role?role=BANK",
       {
         headers: {
           Authorization: "Bearer " + admin_jwtToken, // Replace with your actual JWT token

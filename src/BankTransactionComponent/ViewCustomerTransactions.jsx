@@ -33,7 +33,7 @@ const ViewCustomerTransactions = () => {
 
     try {
       const response = await axios.get(
-        "http://44.203.246.158:32152/api/bank/transaction/history?userId=" + customer.id,
+        "https://bankapi.devopsvanguard.online/api/bank/transaction/history?userId=" + customer.id,
         {
           headers: { Authorization: "Bearer " + jwtToken },
         }

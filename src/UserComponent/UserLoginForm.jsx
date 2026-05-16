@@ -13,7 +13,7 @@ const UserLoginForm = () => {
   };
 
   const loginAction = (e) => {
-    fetch("http://44.203.246.158:32152/api/user/login", {
+    fetch("https://bankapi.devopsvanguard.online/api/user/login", {
       method: "POST",
       headers: {
         Accept: "application/json",

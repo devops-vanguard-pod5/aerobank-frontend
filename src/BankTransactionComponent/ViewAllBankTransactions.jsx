@@ -19,7 +19,7 @@ const ViewAllBankTransactions = () => {
 
     try {
       const response = await axios.get(
-        "http://44.203.246.158:32152/api/bank/transaction/all",
+        "https://bankapi.devopsvanguard.online/api/bank/transaction/all",
         {
           headers: { Authorization: "Bearer " + admin_jwtToken },
         }

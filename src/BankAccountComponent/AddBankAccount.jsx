@@ -27,7 +27,7 @@ const AddBankAccount = () => {
   };
 
   const saveAccount = (e) => {
-    fetch("http://44.203.246.158:32152/api/bank/account/add", {
+    fetch("https://bankapi.devopsvanguard.online/api/bank/account/add", {
       method: "POST",
       headers: {
         Accept: "application/json",

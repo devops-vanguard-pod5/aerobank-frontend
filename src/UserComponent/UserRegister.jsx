@@ -46,7 +46,7 @@ const UserRegister = () => {
       jwtToken = sessionStorage.getItem("admin-jwtToken"); // Use admin's JWT token for bank register
     }
 
-    fetch("http://44.203.246.158:32152/api/user/register", {
+    fetch("https://bankapi.devopsvanguard.online/api/user/register", {
       method: "POST",
       headers: {
         Accept: "application/json",
