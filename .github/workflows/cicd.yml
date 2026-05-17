@@ -67,10 +67,11 @@ jobs:
         git config --global user.email "${GIT_USERNAME}@users.noreply.github.com"
         git config --global user.name "${GIT_USERNAME}"
 
-        # Bulletproof replace for the frontend manifest
-        sed -i "s|image: .*|image: ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}|g" ./objects/Deployment/frontend.yaml
+        # UPDATED: Targeting frontend-deployment.yaml
+        sed -i "s|image: .*|image: ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}|g" ./objects/Deployment/frontend-deployment.yaml
 
-        git add ./objects/Deployment/frontend.yaml
+        # UPDATED: Adding frontend-deployment.yaml
+        git add ./objects/Deployment/frontend-deployment.yaml
 
         # The Safety Catch: Only commit and push IF there is a change detected
         git diff --staged --quiet || (git commit -m "Update frontend image to version ${{ env.IMAGE_TAG }}" && git push origin main)
