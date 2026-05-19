@@ -52,3 +52,4 @@ CMD ["nginx", "-g", "daemon off;"]
 Team & Contributors
 Oluwasheyi Ojelade - Tech Lead (Pod 5 DevOps Vanguard)
 Engineer Dennis - Project Supervisor
+Shaka-Jimoh Musharraf - Contributor
