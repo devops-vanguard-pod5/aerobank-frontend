@@ -1,6 +1,34 @@
 import React from "react";
 
 const AboutUs = () => {
+  // Array holding all team members. 
+  // You only need to edit this list to add/remove people or change roles!
+  const teamMembers = [
+    { name: "Oluwasheyi Olayemi Ojelade", role: "Principal Cloud Architect", firstName: "Oluwasheyi" },
+    { name: "Shaka-Jimoh Musharraf", role: "Contributor", firstName: "Shaka-Jimoh" },
+    { name: "Oguntimehin Oluwakemi", role: "Contributor", firstName: "Oguntimehin" },
+    { name: "Egbugo Ciracus Chukwuebuka", role: "Contributor", firstName: "Egbugo" },
+    { name: "Alisigwe Chiamara Miracle", role: "Contributor", firstName: "Alisigwe" },
+    { name: "Akachukwu Albright Osunkwo", role: "Contributor", firstName: "Akachukwu" },
+    { name: "Peace Odichinma Ekebuisi-Dennar", role: "Contributor", firstName: "Peace" },
+    { name: "Dennis Sunday Chimezie", role: "Contributor", firstName: "Dennis" },
+    { name: "Gloria Globetty Omeagu", role: "Contributor", firstName: "Gloria" },
+    { name: "Favour Chinyere Amanwo", role: "Contributor", firstName: "Favour" },
+    { name: "Okoro Ndidi Edith", role: "Contributor", firstName: "Okoro" },
+    { name: "Paul Stephen Yahi", role: "Contributor", firstName: "Paul" },
+    { name: "Adeniji Temilade Mercy", role: "Contributor", firstName: "Adeniji" },
+    { name: "Loveth Obiageli Ugwu", role: "Contributor", firstName: "Loveth" },
+    { name: "Nwankwo Stella Ukamaka", role: "Contributor", firstName: "Nwankwo" },
+    { name: "Chidinma Victoria Wehere", role: "Contributor", firstName: "Chidinma" },
+    { name: "Ditonipre Joan Benwari", role: "Contributor", firstName: "Ditonipre" },
+    { name: "Victor Olatunji", role: "Contributor", firstName: "Victor" },
+    { name: "Ikaba Michael", role: "Contributor", firstName: "Ikaba" },
+    { name: "Olori Oghenerukevwe O.", role: "Contributor", firstName: "Olori" },
+    { name: "Amaobi Chijindu Mark", role: "Contributor", firstName: "Amaobi" },
+    { name: "Ogodo Uzochukwu Benjamin", role: "Contributor", firstName: "Ogodo" },
+    { name: "Orji Ruth Ezinne", role: "Contributor", firstName: "Orji" }
+  ];
+
   return (
     <div className="container mt-5 mb-5">
       {/* AeroBank Mission */}
@@ -15,108 +43,31 @@ const AboutUs = () => {
 
       {/* Pod 5 Team Section */}
       <div className="text-center mt-5">
-        <h2 className="mb-2 fw-bold">Meet The Team</h2>
-        <h4 className="text-primary mb-4">Pod 5: DevOps Vanguard</h4>
+        <h2 className="mb-2 fw-bold">Meet DevOps Vanguard (Pod-5)</h2>
         <p className="text-muted mx-auto mb-5" style={{ maxWidth: "600px" }}>
           The engineering team behind the architecture, deployment, and security of the AeroBank infrastructure.
         </p>
         
         <div className="row justify-content-center">
           
-          {/* Member 1: Tech Lead */}
-          <div className="col-md-4 mb-4">
-            <div className="card h-100 shadow-sm border-0">
-              <img 
-                src="https://via.placeholder.com/300x300?text=Oluwasheyi" 
-                className="card-img-top rounded-circle mx-auto mt-4" 
-                style={{ width: "150px", height: "150px", objectFit: "cover" }}
-                alt="Oluwasheyi Ojelade" 
-              />
-              <div className="card-body">
-                <h5 className="card-title fw-bold mt-2">Oluwasheyi Ojelade</h5>
-                <h6 className="card-subtitle mb-3 text-primary">Tech Lead / Cloud DevOps Engineer</h6>
-                <p className="card-text text-muted small">
-                  Architected the AWS EKS infrastructure, implemented GitOps CI/CD pipelines via GitHub Actions & ArgoCD, and secured the RDS database with Kubernetes Secrets.
-                </p>
+          {/* React Map Function: This loops through the array and builds a card for every person automatically */}
+          {teamMembers.map((member, index) => (
+            <div className="col-lg-3 col-md-4 col-sm-6 mb-4" key={index}>
+              <div className="card h-100 shadow-sm border-0">
+                <img 
+                  src={`/team-images/${member.firstName}.png`} 
+                  className="card-img-top rounded-circle mx-auto mt-4" 
+                  style={{ width: "120px", height: "120px", objectFit: "cover", border: "4px solid #f8f9fa" }}
+                  alt={member.name}
+                  onError={(e) => { e.target.src = `https://via.placeholder.com/150/cccccc/ffffff?text=${member.firstName}` }} 
+                />
+                <div className="card-body">
+                  <h5 className="card-title fw-bold mt-2" style={{ fontSize: "1.1rem" }}>{member.name}</h5>
+                  <h6 className="card-subtitle mb-3 text-primary" style={{ fontSize: "0.9rem" }}>{member.role}</h6>
+                </div>
               </div>
             </div>
-          </div>
-
-          {/* Member 2 */}
-          <div className="col-md-4 mb-4">
-            <div className="card h-100 shadow-sm border-0">
-              <img 
-                src="https://via.placeholder.com/300x300?text=Team+Member" 
-                className="card-img-top rounded-circle mx-auto mt-4" 
-                style={{ width: "150px", height: "150px", objectFit: "cover" }}
-                alt="Team Member" 
-              />
-              <div className="card-body">
-                <h5 className="card-title fw-bold mt-2">Team Member 2 Name</h5>
-                <h6 className="card-subtitle mb-3 text-primary">Cloud Engineer</h6>
-                <p className="card-text text-muted small">
-                  (Insert contribution here: e.g., Managed containerization, developed monitoring dashboards, and deployed application manifests.)
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Member 3 */}
-          <div className="col-md-4 mb-4">
-            <div className="card h-100 shadow-sm border-0">
-              <img 
-                src="https://via.placeholder.com/300x300?text=Team+Member" 
-                className="card-img-top rounded-circle mx-auto mt-4" 
-                style={{ width: "150px", height: "150px", objectFit: "cover" }}
-                alt="Team Member" 
-              />
-              <div className="card-body">
-                <h5 className="card-title fw-bold mt-2">Team Member 3 Name</h5>
-                <h6 className="card-subtitle mb-3 text-primary">DevSecOps Engineer</h6>
-                <p className="card-text text-muted small">
-                  (Insert contribution here: e.g., Engineered AWS IAM roles, integrated SonarCloud security scanning, and eradicated legacy code vulnerabilities.)
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Member 4 */}
-          <div className="col-md-4 mb-4">
-            <div className="card h-100 shadow-sm border-0">
-              <img 
-                src="https://via.placeholder.com/300x300?text=Team+Member" 
-                className="card-img-top rounded-circle mx-auto mt-4" 
-                style={{ width: "150px", height: "150px", objectFit: "cover" }}
-                alt="Team Member" 
-              />
-              <div className="card-body">
-                <h5 className="card-title fw-bold mt-2">Team Member 4 Name</h5>
-                <h6 className="card-subtitle mb-3 text-primary">Site Reliability Engineer</h6>
-                <p className="card-text text-muted small">
-                  (Insert contribution here: e.g., Configured high-availability replicas, managed Route 53 DNS routing, and performed system integration testing.)
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Member 5 */}
-          <div className="col-md-4 mb-4">
-            <div className="card h-100 shadow-sm border-0">
-              <img 
-                src="https://via.placeholder.com/300x300?text=Team+Member" 
-                className="card-img-top rounded-circle mx-auto mt-4" 
-                style={{ width: "150px", height: "150px", objectFit: "cover" }}
-                alt="Team Member" 
-              />
-              <div className="card-body">
-                <h5 className="card-title fw-bold mt-2">Team Member 5 Name</h5>
-                <h6 className="card-subtitle mb-3 text-primary">Release Manager</h6>
-                <p className="card-text text-muted small">
-                  (Insert contribution here: e.g., Oversaw sprint planning in Jira, managed Git branching strategies, and documented the software architecture.)
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
 
         </div>
       </div>
