@@ -65,3 +65,4 @@ This section tracks the engineers who have actively contributed code to the fron
 Oluwasheyi Olayemi Ojelade - Principal Cloud Architect & Tech Lead
 Akachukwu Osunkwo - Project Contributor
 Shaka-Jimoh Musharraf - Contributor
+- Ndidi Edith - Contributor
