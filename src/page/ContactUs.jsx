@@ -45,7 +45,7 @@ const ContactUs = () => {
               
               <div className="mb-4">
                 <h6 className="fw-bold text-white mb-1">Email</h6>
-                <p className="mb-0">support@aerobank.virusinferno.xyz</p>
+                <p className="mb-0">support@devopsvanguard.online</p>
               </div>
               
               <div className="mb-4">

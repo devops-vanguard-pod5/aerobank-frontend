@@ -1,20 +1,25 @@
-# Digital Witch Cloud Security / DevOps Project: Bank Management App (Frontend)
+#  AeroBank Frontend UI | DevOps Vanguard (Pod 5)
 
-This is the frontend application built with Create React App, comprising CSS, HTML, and JS. 
+This repository contains the React-based frontend application for **AeroBank**, built with modern HTML, CSS, and JavaScript. 
 
-**⚠️ Note:** This application highly depends on the backend to run. Ensure the backend is active and healthy before launching the frontend.
+**⚠️ Backend Dependency:** This application dynamically consumes the AeroBank REST API. Ensure the backend microservice is fully active, healthy, and routable before launching or testing this frontend interface.
 
-**🐳 Containerization:** This app is fully containerized and configured to expose port `3000`.
-
----
-
-### Project Architecture
-![App Preview](architecture-HIPPAA.drawio.svg)
+** Containerization:** This application is fully containerized for Kubernetes deployment and is configured to expose port `3000` via NGINX.
 
 ---
 
-### Docker Configuration
-The application is deployed using a multi-stage Docker build to optimize performance. Below is the `Dockerfile` used to bring the app up:
+##  Project Architecture
+
+![Project Architecture](architecture.png)
+*(Note: Ensure your updated architecture diagram is saved as `architecture.png` in the root of this repository).*
+
+---
+
+##  Docker Configuration
+
+This application utilizes a multi-stage Docker build to optimize performance, minimize image size, and ensure a secure, production-ready artifact for our ECR registry. 
+
+Below is the `Dockerfile` used to build and serve the application:
 
 ```dockerfile
 # Stage 1: Build the React application 
@@ -49,8 +54,14 @@ EXPOSE 3000
 
 # Start nginx server
 CMD ["nginx", "-g", "daemon off;"]
-Team & Contributors
-Oluwasheyi Ojelade - Tech Lead (Pod 5 DevOps Vanguard)
-Engineer Dennis - Project Supervisor
+
+
+           *Team & Contributors*
+  
+This section tracks the engineers who have actively contributed code to the frontend deployment.  
+
+(Pod 5 Members: Please follow the standard Git workflow SOP to branch, add your name below, and submit a Pull Request to main).  
+
+Oluwasheyi Olayemi Ojelade - Principal Cloud Architect & Tech Lead
 Akachukwu Osunkwo - Project Contributor
 Shaka-Jimoh Musharraf - Contributor
