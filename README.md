@@ -1,52 +1,26 @@
-# 💻 AeroBank Frontend UI | DevOps Vanguard (Pod 5)
+#  AeroBank Frontend UI | DevOps Vanguard (Pod 5)
 
 This repository contains the React-based frontend application for **AeroBank**, built with modern HTML, CSS, and JavaScript. 
 
-**⚠️ Backend Dependency:** This application dynamically consumes the AeroBank REST API. Ensure the backend microservice is fully active, healthy, and routable before launching or testing this frontend interface.
+** Backend Dependency:** This application dynamically consumes the AeroBank REST API. Ensure the backend microservice is fully active, healthy, and routable before launching or testing this frontend interface.
 
-**🐳 Containerization:** This application is fully containerized for Kubernetes deployment and is configured to expose port `3000` via NGINX.
+** Containerization:** This application is fully containerized for Kubernetes deployment and is configured to expose port `3000` via NGINX.
 
 ---
 
-## 🏗️ Project Architecture
+##  Project Architecture
 
-```mermaid
-flowchart TD
-    subgraph Internet[Internet]
-        User[User Browser]
-    end
+![AeroBank Frontend Architecture](frontend-architecture.png)
 
-    subgraph AWSTerraformManaged[AWS Managed Services]
-        R53[AWS Route 53 DNS]
-    end
+---
 
-    subgraph EKSCluster[AWS EKS Kubernetes Cluster]
-        KubeAPI[K8s API Server]
+##  Docker Configuration
 
-        subgraph NamespaceFrontend[Namespace: aerobank-frontend]
-            Ingress[Nginx Ingress Controller]
-            ReactPod[AeroBank Frontend Pod Port 3000]
-        end
+This application utilizes a multi-stage Docker build to optimize performance, minimize image size, and ensure a secure, production-ready artifact for our ECR registry. 
 
-        subgraph Addons[Kubernetes Add-ons]
-            CertManager[Cert-Manager SSL]
-        end
-    end
+Below is the `Dockerfile` used to build and serve the application:
 
-    User -- "HTTPS Port 443" --> R53
-    R53 --> Ingress
-    Ingress -- "Port 3000" --> ReactPod
-    ReactPod -- "Secure REST API Calls" --> SecureBackend[Backend REST API Service]
-    ReactPod -- "Readiness/Liveness Checks" --> KubeAPI
-    Ingress -- "Automated SSL Validation" --> CertManager
-
-
-Docker Configuration
-This application utilizes a multi-stage Docker build to optimize performance, minimize image size, and ensure a secure, production-ready artifact for our ECR registry.
-
-Below is the Dockerfile used to build and serve the application:
-
-Dockerfile
+```dockerfile
 # Stage 1: Build the React application 
 FROM node:18 AS build
 WORKDIR /app
@@ -61,9 +35,9 @@ COPY --from=build /app/build /usr/share/nginx/html
 EXPOSE 3000
 CMD ["nginx", "-g", "daemon off;"]
 
- Team & Contributors
+Team & Contributors
 This section tracks the engineers who have actively contributed code to the frontend deployment.
-
+ 
 Oluwasheyi Olayemi Ojelade - Principal Cloud Architect & Tech Lead
 
 Akachukwu Osunkwo - Project Contributor
