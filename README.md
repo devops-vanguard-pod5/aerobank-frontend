@@ -43,5 +43,5 @@ Oluwasheyi Olayemi Ojelade - Principal Cloud Architect & Tech Lead
 Akachukwu Osunkwo - Project Contributor
 
 Shaka-Jimoh Musharraf - Contributor
-
+Ruth Ezinne Orji - Contributor
 Ndidi Edith - Contributor
