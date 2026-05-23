@@ -10,7 +10,7 @@ This repository contains the React-based frontend application for **AeroBank**, 
 
 ##  Project Architecture
 
-![AeroBank Frontend Architecture](frontend-architecture.png)
+![AeroBank Frontend Architecture](frontend-architecture.svg)
 
 ---
 
