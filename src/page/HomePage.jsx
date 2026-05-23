@@ -84,7 +84,7 @@ const HomePage = () => {
               Discover a new standard of financial control through the intuitive AeroBank portal. Seamlessly handle your transactions, deposits, and withdrawals with an interface designed to simplify the user journey.
             </p>
             <p className="ms-5">
-              Every interaction is backed by an operational ecosystem built for maximum reliability. Our automated GitOps pipelines process your data with enterprise-grade speed and security, providing you with peace of mind. AeroBank isn't just a project—it is a demonstration of what is possible when modern infrastructure meets secure financial management.
+              Every interaction is backed by an operational ecosystem built for maximum reliability. Our automated GitOps pipelines process your data with enterprise-grade speed and security, providing you with peace of mind. AeroBank isn't just a project, it is a demonstration of what is possible when modern infrastructure meets secure financial management.
             </p>
             <Link to="/user/login" className="btn bg-color custom-bg-text ms-5 mt-3 px-4 py-2">
               Access Your Account
